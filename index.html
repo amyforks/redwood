@@ -1,10 +1,12 @@
 <html>
-	<head>
-		<title>
-			Fyre Minecraft Client - Coming Soon!
-		</title>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<style>
+    <head></head>
+        <title>Fyre Client</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
         body,h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", "light";}
         body, html {
         height: 100%;
@@ -22,10 +24,10 @@
         
         /* First image (Logo. Full height) */
         .bgimg-1 {
-        background-image: url('/img/parallax1.png');
+        background-image: url('/img/parallax.jpg');
         min-height: 100%;
         }
-        
+          
         .w3-wide {letter-spacing: 10px;}
         .w3-hover-opacity {cursor: pointer;}
         
@@ -38,13 +40,97 @@
         }
         </style>
 	</head>
-	<body>
-		<div class="bgimg-1 w3-display-container w3-opacity-min">
-			<div class="w3-display-middle" style="white-space:nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
-					Eta S0n
-				</span>
+    <body class="w3-light-grey">
+        
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button w3-hide-small">Fyre Client</a>
+        </div>
+        
+        </div>
+        
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-text-black w3-animate-opacity"><h1>Fyre Client</h1></span>
+        </div>
+        </div>
+        
+        <!-- Container (Content) -->
+        <div class="w3-content w3-container w3-padding-64" id="content">
+        
+        <div class="w3-row-padding">
+        	<div class="w3-threequarter">
+			<div class="w3-container w3-white w3-text-black">
+				<h2>About Fyre Client:</h2>
+				
+				<h5>Fyre Client is a 1.8.8 PVP Client which is designed to give players the edge in PVP engagements.</h5>
+
+				<h3>Current Features/Mods</h3>
+				<ul>
+					<li>Optifine HD U E1</li>
+					<li>Mouse Delay Fix (1.8.8)</li>
+					<li>CPS Mod</li>
+					<li>Ping Mod</li>
+					<li>XYZ Coordinates</li>
+					<li>Cosmetic Base (Not Ready)</li>
+					<li>FileIO System (Saves Mod Positioning)</li>
+					<li>1.7 Block Hitting</li>
+				</ul>
+                                <h3>Future Features/Mods</h3>
+                                <ul>
+                                        <li>Drag GUI</li>
+                                        <li>Keystrokes Mod</li>
+                                        <li>All 1.7 Animations</li>
+                                        <li>Custom Capes</li>
+				</ul>
+				<h1>⠀</h1>
 			</div>
 		</div>
-	</body>
+		<div class="w3-quarter">
+			<div class="w3-panel">
+				<button onclick="window.location.href = 'https://discord.gg/5RrYqdj';" class="w3-button w3-block w3-black w3-round">Discord Server</button>
+			</div>
+			<div class="w3-panel">
+                                <button onclick="window.location.href = 'https://www.youtube.com/channel/UCu4urCVVaA8jUZiGbVObLgQ';" class="w3-button w3-block w3-black w3-round">YouTube</button>
+                        </div>
+		</div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-16 w3-opacity">
+        <p class="w3-text-white">(c) Fyre Team, 2019</p>
+        <a href="#home" class="w3-button w3-light-grey w3-padding-4"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        </footer>
+        
+        <script>
+        
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+        
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        </script>
+        
+        
+    </body>
 </html>
