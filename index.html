@@ -103,14 +103,45 @@
 		</div>
         </div>
         
-        <!-- Footer -->
-        <footer class="w3-center w3-black w3-padding-16 w3-opacity">
-        <p class="w3-text-white">(c) Fyre Team, 2019</p>
-        <a href="#home" class="w3-button w3-light-grey w3-padding-4"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        </footer>
-        
-        <script>
-        
+	<div class="w3-content w3-display-container" style="max-width:900px;">
+
+    <!-- Slideshow -->
+    <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+      <img src="/img/fyreslides/slide1.png" style="width:100%">
+    </div>
+    <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+      <img src="/img/fyreslides/slide2.png" style="width:100%">
+    </div>
+  <button class="w3-button w3-light-grey noselection w3-display-left" onclick="plusDivs(-1)">❮</button>
+  <button class="w3-button w3-light-grey noselection w3-display-right" onclick="plusDivs(+1)">❯</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16 w3-opacity">
+  <p class="w3-text-white">(c) Fyre Team, 2019</p>
+  <a href="#home" class="w3-button w3-light-grey w3-padding-4"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
+  
+  <script>
+  
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("slideshow");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  x[slideIndex-1].style.display = "block";
+	}
+
         // Change style of navbar on scroll
         window.onscroll = function() {myFunction()};
         function myFunction() {
