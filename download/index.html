@@ -1,0 +1,140 @@
+<html>
+    <head></head>
+        <title>Fyre Client</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", "light";}
+        body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+        }
+        
+        /* Create a Parallax Effect */
+        .bgimg-1 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+        background-image: url('/img/parallax.jpg');
+        min-height: 100%;
+        }
+          
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
+        
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1600px) {
+        .bgimg-1 {
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+        }
+        </style>
+	</head>
+    <body class="w3-light-grey">
+        
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+        <div class="w3-bar w3-animate-top" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button w3-hide-small">Fyre Client</a>
+        </div>
+        
+        </div>
+        
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-animate-top w3-padding-large w3-xlarge w3-wide w3-text-black w3-animate-opacity"><h1>Fyre Client</h1></span>
+        </div>
+        </div>
+        
+        <!-- Container (Content) -->
+        <div class="w3-content w3-container w3-padding-64" id="content">
+        
+        <div class="w3-row-padding">
+        	<div class="w3-threequarter">
+			<div class="w3-container w3-white w3-text-black">
+				<h2>Downloads</h2>
+				
+				<h5>Fyre Client is currently unreleased. This page is just a placeholder.</h5>
+
+				<h3>Stable</h3>
+				Unavailable
+				<h1>⠀</h1>
+			</div>
+		</div>
+		<div class="w3-quarter">
+			<div class="w3-panel">
+				<button onclick="window.location.href = 'https://discord.gg/5RrYqdj';" class="w3-button w3-block w3-black w3-round">Discord Server</button>
+			</div>
+			<div class="w3-panel">
+                                <button onclick="window.location.href = 'https://www.youtube.com/channel/UCu4urCVVaA8jUZiGbVObLgQ';" class="w3-button w3-block w3-black w3-round">YouTube</button>
+                        </div>
+		</div>
+        </div>
+        </div>
+        
+	
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16 w3-opacity">
+  <p class="w3-text-white">(c) Fyre Team, 2019</p>
+  <a href="#home" class="w3-button w3-light-grey w3-padding-4"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
+  
+  <script>
+  
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("slideshow");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  x[slideIndex-1].style.display = "block";
+	}
+
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+        
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        </script>
+        
+        
+    </body>
+</html>
