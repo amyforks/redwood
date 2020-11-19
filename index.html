@@ -1,5 +1,4 @@
 <html>
-
 <head>
 <title>Redwood Forest</title>
 <meta charset="UTF-8">
@@ -25,10 +24,15 @@
         
         /* First image (Logo. Full height) */
         .bgimg-1 {
-        background-image: url('https://fyre.ml/img/parallax.jpg');
+        background-image: url('img/screenshot1.png');
         min-height: 100%;
         }
-          
+         
+		.item {
+		color:#fff!important;
+		background-color:#212121!important
+		}
+		
         .w3-wide {letter-spacing: 10px;}
         .w3-hover-opacity {cursor: pointer;}
         
@@ -36,20 +40,17 @@
         @media only screen and (max-device-width: 1600px) {
         .bgimg-1 {
             background-attachment: scroll;
-            min-height: 400px;
+            min-height:70%;
         }
         }
 </style>
 </head>
 
-<body class="w3-white">
+<body class="w3-black">
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-        <div class="w3-bar w3-animate-top" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
+        <div class="w3-bar w3-animate-top w3-text-white" id="myNavbar">
             <a href="/" class="w3-bar-item w3-button w3-hide-small">Redwood Forest</a>
         </div>
 
@@ -58,62 +59,41 @@
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-animate-top w3-padding-large w3-xlarge w3-wide w3-text-black w3-animate-opacity"><h1>Redwood Forest</h1></span>
+            <span class="w3-center w3-animate-top w3-padding-large w3-xlarge w3-wide w3-text-white w3-animate-opacity"><h1>Redwood Forest</h1></span>
         </div>
     </div>
     
 	<br>
 	
     <div class="w3-container w3-padding" id="about">
-		<div class="w3-container w3-white w3-text-black w3-card">
-			<h5>Redwood Forest is a small town located in Grapeyard Superb named after the Redwood trees which grow in the area</h5>
+		<div class="w3-container item w3-card">
+			<h4>Redwood Forest is a small town located in Grapeyard Superb named after the Redwood trees which grow in the area</h4>
 		</div>
     </div>
 	
-	<br>
 	
 	<div class="w3-container w3-padding" id="about">
-		<div class="w3-container w3-white w3-text-black w3-card">
+		<div class="w3-container item w3-card">
 			<h3>Redwood News</h5>
 		</div>
     </div>
 	
-    <!-- Container (Content) -->
-    <!--<div class="w3-white" id="news">
-		<div class=" w3-row-padding">
-			<h2>Redwood News</h2>
-			
-			<div class="w3-third w3-card">
-				<h3>Redwood Houses Estate Agents</h3>
-				<h6>Redwood Houses has been built on the second floor of 3 Main Street for all housing inquiries </h6>
-			</div>
-			<div class="w3-third w3-card w3-padding">
-				<h3>Redwood Electrical</h3>
-				<h6>Redwood Electrical has been built at 2 Amy Street. Unauthorised modification of the machines inside is illegal </h6>
-			</div>
-			<div class="w3-third w3-card w3-padding">
-				<h3>Redwood Forest is now open!</h3>
-				<h6>Redwood Forest is now open to all visitors or future citizens. The fastest way to get to us is amy6969's travelnet, #94 in the hub. </h6>
-			</div>
-		</div>
-    </div>-->
-	
 	<div class="w3-container w3-padding ">
-		<div class="w3-row-padding w3-white" style="margin:0 -16px">
+		<div class="w3-row-padding" style="margin:0 -16px">
 			<div class="w3-third">
-				<div style="height: 175px" class="w3-card w3-container w3-margin-bottom">
+				<div style="height: 175px" class="w3-card w3-container w3-margin-bottom item">
 					<h3>Redwood Houses Estate Agents</h3>
 					<h6>Redwood Houses has been built on the second floor of 3 Main Street for all housing inquiries </h6>
 				</div>
 			</div>
 			<div class="w3-third">
-				<div style="height:175px" class="w3-card-2 w3-container w3-margin-bottom">
+				<div style="height:175px" class="w3-card-2 w3-container w3-margin-bottom item">
 					<h3>Redwood Electrical</h3>
 					<h6>Redwood Electrical has been built at 2 Amy Street. Unauthorised modification of the machines inside is illegal </h6>
 				</div>
 			</div>
 			<div class="w3-third">
-				<div style="height:175px" class="w3-card-4 w3-container w3-margin-bottom">
+				<div style="height:175px" class="w3-card-4 w3-container w3-margin-bottom item">
 					<h3>Redwood Forest is now open!</h3>
 					<h6>Redwood Forest is now open to all visitors or future citizens. The fastest way to get to us is amy6969's travelnet, #94 in the hub. </h6>
 				</div>
@@ -128,44 +108,16 @@
     </footer>
 
     <script>
-        var slideIndex = 1;
-        	showDivs(slideIndex);
-        	
-        	function plusDivs(n) {
-        	  showDivs(slideIndex += n);
-        	}
-        	
-        	function showDivs(n) {
-        	  var i;
-        	  var x = document.getElementsByClassName("slideshow");
-        	  if (n > x.length) {slideIndex = 1}
-        	  if (n < 1) {slideIndex = x.length} ;
-        	  for (i = 0; i < x.length; i++) {
-        	    x[i].style.display = "none";
-        	  }
-        	  x[slideIndex-1].style.display = "block";
-        	}
-        
-                // Change style of navbar on scroll
-                window.onscroll = function() {myFunction()};
-                function myFunction() {
-                    var navbar = document.getElementById("myNavbar");
-                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-                    } else {
-                        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-                    }
-                }
-                
-                // Used to toggle the menu on small screens when clicking on the menu button
-                function toggleFunction() {
-                    var x = document.getElementById("navDemo");
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                    }
-                }
+		// Change style of navbar on scroll
+		window.onscroll = function() {myFunction()};
+		function myFunction() {
+			var navbar = document.getElementById("myNavbar");
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " item";
+			} else {
+				navbar.className = navbar.className.replace(" w3-card w3-animate-top item", "");
+			}
+		}
     </script>
 
 </body>
